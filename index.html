@@ -139,6 +139,11 @@
       render();                             // draw once
       input.remove();                       // hide the controls
       exportBtn.remove();
+
+      const mk = document.createElement('button');
+      mk.textContent = 'Make your own';
+      mk.addEventListener('click', () => location.href = location.pathname);
+      document.body.appendChild(mk);
     }
 
     function render () { output.textContent = generateWrapped(input.value); }
