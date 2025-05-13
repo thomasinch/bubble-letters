@@ -155,6 +155,9 @@
         '?t=' + encodeURIComponent(input.value.trim());
       navigator.clipboard.writeText(url).then(() => {
         exportBtn.textContent = '✔︎ Link copied';
+        setTimeout(() => {
+      exportBtn.textContent = 'Create link';
+    }, 2000); // revert after 2 seconds
       });
     });
     
